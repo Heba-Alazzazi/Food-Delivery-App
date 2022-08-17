@@ -20,8 +20,8 @@ class _SplashState extends State<Splash> {
     super.initState();
     timer = Timer(
         const Duration(seconds: 3),
-        () => Navigator.push(
-            context,goTo(const Introduction())));
+        () => Navigator.of(context).pushAndRemoveUntil(goTo(const Introduction()), (route) => false)
+        );
   }
 
   @override

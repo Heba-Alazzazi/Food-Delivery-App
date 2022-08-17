@@ -28,6 +28,7 @@ class Button extends StatelessWidget {
           child: Text(
             nameButtom,
             style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+            //Theme.of(context).textTheme.bodyMedium
           )),
     );
   }

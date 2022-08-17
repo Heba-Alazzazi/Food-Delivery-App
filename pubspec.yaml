@@ -29,6 +29,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_screenutil: ^5.5.3
+  provider: ^6.0.3
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -78,7 +80,10 @@ flutter:
     - family: Metropolis
       fonts:
         - asset: assets/fonts/Metropolis-Bold.otf
-        - asset: assets/fonts/Metropolis-Black.otf
+        - asset: assets/fonts/Metropolis-ExtraBold.otf
+          weight: 800
+        - asset: assets/fonts/Metropolis-SemiBold.otf
+          weight: 700
         - asset: assets/fonts/Metropolis-Medium.otf
         - asset: assets/fonts/Metropolis-Regular.otf
         #- asset: fonts/Schyler-Italic.ttf

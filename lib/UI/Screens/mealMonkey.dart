@@ -1,10 +1,12 @@
 // ignore_for_file: prefer_typing_uninitialized_variables, file_names
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:meal_monkey/Global_Widget/button.dart';
-import 'package:meal_monkey/UI/Screens/Auth/login.dart';
 import 'package:meal_monkey/constant.dart';
-import 'Auth/localWidget/creatButton.dart';
-import 'Auth/sigup.dart';
+import '../Auth/localWidget/creatButton.dart';
+import '../Auth/login.dart';
+import '../Auth/sigup.dart';
+
 
 class MealMonkey extends StatefulWidget {
   const MealMonkey({Key? key}) : super(key: key);
@@ -39,7 +41,7 @@ class _MealMonkeyState extends State<MealMonkey> {
               function: () {
                 Navigator.push(context, goTo(SignUp()));
               },
-              nameButtom: 'Creat an Account')
+              nameButtom: 'Creat an Account',minimumSize: Size(double.infinity, 56.h),)
         ],
       ),
     );

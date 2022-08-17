@@ -2,8 +2,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:meal_monkey/UI/Screens/mealMonkey.dart';
-import 'package:meal_monkey/UI/Screens/widget/CustomPage.dart';
 import 'package:meal_monkey/constant.dart';
+
+import '../../Global_Widget/CustomPage.dart';
 
 class Introduction extends StatefulWidget {
   const Introduction({Key? key}) : super(key: key);
@@ -28,46 +29,54 @@ class _IntroductionState extends State<Introduction> {
               CustomPage(
                   image: 'assets/images/page1.png',
                   function: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => CustomPage(
-                                image: 'assets/images/page2.png',
-                                function: () {
-                                  Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) => CustomPage(
-                                              image: 'assets/images/page3.png',
-                                              function: () {
-                                                Navigator.push(
-                                                    context,
-                                                    MaterialPageRoute(
-                                                        builder: (context) =>
-                                                            const MealMonkey()));
-                                              })));
-                                })));
+                    
+                    controller.nextPage(
+                        duration: Duration(milliseconds: 200), curve: Curves.ease);
+                    // Navigator.push(
+                    //     context,
+                    //     MaterialPageRoute(
+                    //         builder: (context) => CustomPage(
+                    //             image: 'assets/images/page2.png',
+                    //             function: () {
+                    //               Navigator.push(
+                    //                   context,
+                    //                   MaterialPageRoute(
+                    //                       builder: (context) => CustomPage(
+                    //                           image: 'assets/images/page3.png',
+                    //                           function: () {
+                    //                             Navigator.push(
+                    //                                 context,
+                    //                                 MaterialPageRoute(
+                    //                                     builder: (context) =>
+                    //                                         const MealMonkey()));
+                    //                           })));
+                    //             })));
                   }),
               CustomPage(
                   image: 'assets/images/page2.png',
                   function: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => CustomPage(
-                                image: 'assets/images/page3.png',
-                                function: () {
-                                  Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) => const MealMonkey()));
-                                })));
+                    controller.nextPage(
+                        duration: Duration(milliseconds: 200), curve: Curves.ease);
+                    // Navigator.push(
+                    //     context,
+                    //     MaterialPageRoute(
+                    //         builder: (context) => CustomPage(
+                    //             image: 'assets/images/page3.png',
+                    //             function: () {
+                    //               Navigator.push(
+                    //                   context,
+                    //                   MaterialPageRoute(
+                    //                       builder: (context) =>
+                    //                           const MealMonkey()));
+                    //             })));
                   }),
               CustomPage(
                   image: 'assets/images/page3.png',
                   function: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => const MealMonkey()));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const MealMonkey()));
                   })
             ],
           ),
